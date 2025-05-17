@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghidul Departamentului Medical</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #fff 0%, #ffeaea 100%);
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 90px;
+    min-width: 90px;
+    background: rgba(183,28,28,0.13);
+    color: #b71c1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5em 0 2em 0;
+    border-radius: 0 32px 32px 0;
+    box-shadow: 4px 0 24px rgba(183,28,28,0.10);
+    min-height: 100vh;
+    transition: width 0.35s cubic-bezier(.4,2,.6,1), background 0.3s;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+    border-right: 2px solid #b71c1c33;
+}
+
+.sidebar:hover {
+    width: 340px;
+    min-width: 220px;
+    background: rgba(255,255,255,0.85);
+}
+
+.sidebar-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 2.5em;
+    background: #b71c1c;
+    color: #fff;
+    border-radius: 1.5em;
+    padding: 2em 2em;
+    box-shadow: 0 2px 12px rgba(183,28,28,0.13);
+    transition: writing-mode 0.3s, transform 0.3s, padding 0.3s, font-size 0.3s, background 0.3s, margin 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    border: none;
+    position: relative;
+}
+.sidebar-title .fa-kit-medical {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+    color: #fff;
+    filter: drop-shadow(0 0 6px #b71c1c88);
+}
+.sidebar:hover .sidebar-title {
+    writing-mode: initial;
+    transform: none;
+    font-size: 1.5em;
+    padding: 1em 0.7em;
+    margin-bottom: 2em;
+    white-space: normal;
+    overflow: visible;
+    background: #b71c1c; /* ← doar roșu solid! */
+    color: #fff;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    border: none;
+}
+
+.sidebar:hover .sidebar-links {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.35s 0.1s;
+}
+
+.sidebar-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    background: #b71c1c;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.7em 1.2em 0.7em 1.1em;
+    border-radius: 1.2em;
+    font-size: 1.08em;
+    border: none;
+    box-shadow: 0 2px 12px rgba(183,28,28,0.10);
+    backdrop-filter: blur(2px);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s, border 0.2s;
+    text-align: left;
+    opacity: 0;
+    transform: translateX(-24px) scale(0.98);
+    filter: drop-shadow(0 0 0 #b71c1c00);
+}
+.sidebar:hover .sidebar-links a {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition: opacity 0.35s 0.15s, transform 0.35s 0.15s;
+}
+.sidebar-links a:hover, .sidebar-links a.active {
+    background: #fff;
+    color: #b71c1c;
+    border: 2px solid #b71c1c;
+    box-shadow: 0 4px 24px #b71c1c44;
+    transform: scale(1.07);
+    filter: drop-shadow(0 0 8px #b71c1c88);
+}
+.sidebar-links a i {
+    min-width: 1.3em;
+    text-align: center;
+    font-size: 1.1em;
+    opacity: 0.85;
+}
+
+/* Responsive: pe mobil devine bară orizontală sus */
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100vw;
+        min-width: unset;
+        border-radius: 0 0 40px 40px;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1em 0.5em;
+        height: auto;
+        min-height: unset;
+        border-right: none;
+        border-bottom: 2px solid #b71c1c;
+        backdrop-filter: blur(8px);
+    }
+    .sidebar-title {
+        writing-mode: initial;
+        transform: none;
+        font-size: 1.1em;
+        padding: 0.7em 0.3em;
+        margin-bottom: 0.5em;
+        white-space: normal;
+        background: #b71c1c;
+        color: #fff;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+    .sidebar-links {
+        border: none !important;
+        flex-direction: row;
+        gap: 0.5em;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        width: 100vw;
+    }
+    .sidebar-links a {
+        font-size: 0.95em;
+        padding: 0.5em 0.8em;
+        white-space: nowrap;
+        opacity: 1 !important;
+        transform: none !important;
+        background: #b71c1c;
+        color: #fff;
+        border: none !important;
+        filter: none;
+    }
+    .sidebar-links a:hover, .sidebar-links a.active {
+        background: #fff;
+        color: #b71c1c;
+        border: 2px solid #b71c1c !important;
+    }
+}
+
+.content {
+    flex: 1;
+    padding: 3em 2em;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-title">
+            <i class="fa-solid fa-kit-medical"></i>
+            Departamentul<br>Medical Viceroy
+        </div>
+        <div class="sidebar-links" id="sidebarLinks">
+            <a onclick="loadSection('Introducere.html')" class="active"><i class="fa-solid fa-house-medical"></i>Introducere</a>
+            <a onclick="loadSection('GhidJaf.html')"><i class="fa-solid fa-user-nurse"></i>Ghid Jaf</a>
+            <a onclick="loadSection('Rp Spital.html')"><i class="fa-solid fa-hospital"></i>Rp Spital</a>
+            <a onclick="loadSection('CoduriRadio.html')"><i class="fa-solid fa-headset"></i>Coduri Radio</a>
+            <a onclick="loadSection('Medicamente,Echipamente.html')"><i class="fa-solid fa-pills"></i>Medicamente/Echipamente</a>
+            <a onclick="loadSection('Rp Teren, Cert BLS.html')"><i class="fa-solid fa-truck-medical"></i>Rp. Teren/Cert. BLS</a>
+            <a onclick="loadSection('Rp S.M.U.L.S., CERT. S.M.U.L.S.html')"><i class="fa-solid fa-user-doctor"></i>Rp S.M.U.L.S., CERT. S.M.U.L.S.</a>
+            <a onclick="loadSection('Rp Operatii.html')"><i class="fa-solid fa-heart-pulse"></i>Rp. Operatii</a>
+            <a onclick="loadSection('Rezidentiat.html')"><i class="fa-solid fa-graduation-cap"></i>Rezidentiat</a>
+            <a onclick="loadSection('Rp Certificat Moto.html')"><i class="fa-solid fa-motorcycle"></i>Rp. Certificat Moto</a>
+            <a onclick="loadSection('I.S.U.L.S..html')"><i class="fa-solid fa-fire-extinguisher"></i>Membrii I.S.U.L.S.</a>
+            <a onclick="loadSection('Certificat Pilot.html')"><i class="fa-solid fa-plane"></i>Certificat Pilot</a>
+        </div>
+    </div>
+    <div class="content" id="main-content">
+        <h1>Bine ai venit în Ghidul Departamentului Medical!</h1>
+        <p>Selectează o secțiune din meniu.</p>
+    </div>
+    <script>
+        // Active link highlight
+        function setActiveLink(el) {
+            document.querySelectorAll('.sidebar-links a').forEach(a => a.classList.remove('active'));
+            el.classList.add('active');
+        }
+        // Load section
+        function loadSection(filename) {
+            setActiveLink(event.target);
+            if (filename === 'Introducere.html') {
+                document.getElementById('main-content').innerHTML = `
+                    <h1>Bine ai venit în Ghidul Departamentului Medical!</h1>
+                    <p>Selectează o secțiune din meniu.</p>
+                `;
+                return;
+            }
+            fetch(filename)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('main-content').innerHTML = html;
+                })
+                .catch(() => {
+                    document.getElementById('main-content').innerHTML = '<p>Nu s-a putut încărca secțiunea.</p>';
+                });
+        }
+    </script>
+</body>
+</html>
