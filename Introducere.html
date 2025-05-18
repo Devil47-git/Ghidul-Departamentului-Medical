@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Ghidul Departamentului Medical</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghidul Departamentului Medical</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -13,7 +19,6 @@
             min-height: 100vh;
             display: flex;
         }
-
         .sidebar {
             width: 340px;
             min-width: 220px;
@@ -32,7 +37,6 @@
             backdrop-filter: blur(12px);
             border-right: 2px solid #b71c1c33;
         }
-
         .sidebar-title {
             display: flex;
             flex-direction: column;
@@ -49,20 +53,17 @@
             box-shadow: 0 2px 12px rgba(183,28,28,0.13);
             width: 180px;
         }
-
         .sidebar-title i {
             font-size: 2em;
             margin-bottom: 0.4em;
             color: #fff;
             filter: drop-shadow(0 0 6px #b71c1c88);
         }
-
         .sidebar-links {
             display: flex;
             flex-direction: column;
             gap: 1em;
         }
-
         .sidebar-links a {
             display: flex;
             align-items: center;
@@ -76,8 +77,8 @@
             font-size: 1.08em;
             box-shadow: 0 2px 12px rgba(183,28,28,0.10);
             transition: all 0.2s ease;
+            cursor: pointer;
         }
-
         .sidebar-links a:hover, .sidebar-links a.active {
             background: #fff;
             color: #b71c1c;
@@ -85,14 +86,12 @@
             box-shadow: 0 4px 24px #b71c1c44;
             transform: scale(1.07);
         }
-
         .sidebar-links a i {
             min-width: 1.3em;
             text-align: center;
             font-size: 1.1em;
             opacity: 0.85;
         }
-
         @media (max-width: 800px) {
             body {
                 flex-direction: column;
@@ -125,71 +124,69 @@
                 white-space: nowrap;
             }
         }
-
         .content {
             flex: 1;
             padding: 3em 2em;
             text-align: center;
         }
-
         .intro-section {
-    max-width: 900px;
-    margin: 2em auto;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 2px 16px #b71c1c22;
-    padding: 2em 2.5em;
-}
-.intro-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-    background: #b71c1c;
-    color: #fff;
-    border-radius: 12px;
-    padding: 1em 0;
-    margin-bottom: 2em;
-}
-.intro-header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-.intro-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
-.intro-box {
-    background: #f7f7f7;
-    border-radius: 10px;
-    margin-bottom: 1.5em;
-    padding: 1.2em 1.5em;
-    border-left: 8px solid #b71c1c;
-}
-.intro-box.highlight {
-    background: #ffeaea;
-    border-left: 8px solid #b71c1c;
-}
-.intro-box.extra {
-    background: #eee;
-    border-left: 8px solid #444;
-}
-.intro-box h2 {
-    margin-top: 0;
-    color: #b71c1c;
-    font-size: 1.3em;
-}
-.intro-box ul {
-    margin: 0.5em 0 0 1.2em;
-    padding: 0;
-}
-.intro-box li {
-    margin-bottom: 0.5em;
-    font-size: 1.05em;
-}
+            max-width: 900px;
+            margin: 2em auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px #b71c1c22;
+            padding: 2em 2.5em;
+        }
+        .intro-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+            background: #b71c1c;
+            color: #fff;
+            border-radius: 12px;
+            padding: 1em 0;
+            margin-bottom: 2em;
+        }
+        .intro-header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .intro-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .intro-box {
+            background: #f7f7f7;
+            border-radius: 10px;
+            margin-bottom: 1.5em;
+            padding: 1.2em 1.5em;
+            border-left: 8px solid #b71c1c;
+        }
+        .intro-box.highlight {
+            background: #ffeaea;
+            border-left: 8px solid #b71c1c;
+        }
+        .intro-box.extra {
+            background: #eee;
+            border-left: 8px solid #444;
+        }
+        .intro-box h2 {
+            margin-top: 0;
+            color: #b71c1c;
+            font-size: 1.3em;
+        }
+        .intro-box ul {
+            margin: 0.5em 0 0 1.2em;
+            padding: 0;
+        }
+        .intro-box li {
+            margin-bottom: 0.5em;
+            font-size: 1.05em;
+        }
     </style>
 </head>
 <body>
@@ -199,20 +196,21 @@
             <div>Departamentul Medical Viceroy</div>
         </div>
         <div class="sidebar-links" id="sidebarLinks">
-            <a onclick="loadSection('Introducere.html')" class="active"><i class="fa-solid fa-house-medical"></i>Introducere</a>
-            <a onclick="loadSection('GhidJaf.html')"><i class="fa-solid fa-user-nurse"></i>Ghid Jaf</a>
-            <a onclick="loadSection('Rp Spital.html')"><i class="fa-solid fa-hospital"></i>Rp Spital</a>
-            <a onclick="loadSection('CoduriRadio.html')"><i class="fa-solid fa-headset"></i>Coduri Radio</a>
-            <a onclick="loadSection('Medicamente,Echipamente.html')"><i class="fa-solid fa-pills"></i>Medicamente/Echipamente</a>
-            <a onclick="loadSection('Rp Teren, Cert BLS.html')"><i class="fa-solid fa-truck-medical"></i>Rp. Teren/Cert. BLS</a>
-            <a onclick="loadSection('Rp S.M.U.L.S., CERT. S.M.U.L.S.html')"><i class="fa-solid fa-user-doctor"></i>Rp S.M.U.L.S., CERT. S.M.U.L.S.</a>
-            <a onclick="loadSection('Rp Operatii.html')"><i class="fa-solid fa-heart-pulse"></i>Rp. Operatii</a>
-            <a onclick="loadSection('Rezidentiat.html')"><i class="fa-solid fa-graduation-cap"></i>Rezidentiat</a>
-            <a onclick="loadSection('Rp Certificat Moto.html')"><i class="fa-solid fa-motorcycle"></i>Rp. Certificat Moto</a>
-            <a onclick="loadSection('I.S.U.L.S..html')"><i class="fa-solid fa-fire-extinguisher"></i>Membrii I.S.U.L.S.</a>
-            <a onclick="loadSection('Certificat Pilot.html')"><i class="fa-solid fa-plane"></i>Certificat Pilot</a>
+            <a onclick="loadSection('IntroducereContent.html', this)" class="active"><i class="fa-solid fa-house-medical"></i>Introducere</a>
+            <a onclick="loadSection('GhidJaf.html', this)"><i class="fa-solid fa-user-nurse"></i>Ghid Jaf</a>
+            <a onclick="loadSection('Rp Spital.html', this)"><i class="fa-solid fa-hospital"></i>Rp Spital</a>
+            <a onclick="loadSection('CoduriRadio.html', this)"><i class="fa-solid fa-headset"></i>Coduri Radio</a>
+            <a onclick="loadSection('Medicamente,Echipamente.html', this)"><i class="fa-solid fa-pills"></i>Medicamente/Echipamente</a>
+            <a onclick="loadSection('Rp Teren, Cert BLS.html', this)"><i class="fa-solid fa-truck-medical"></i>Rp. Teren/Cert. BLS</a>
+            <a onclick="loadSection('Rp S.M.U.L.S., CERT. S.M.U.L.S.html', this)"><i class="fa-solid fa-user-doctor"></i>Rp S.M.U.L.S., CERT. S.M.U.L.S.</a>
+            <a onclick="loadSection('Rp Operatii.html', this)"><i class="fa-solid fa-heart-pulse"></i>Rp. Operatii</a>
+            <a onclick="loadSection('Rezidentiat.html', this)"><i class="fa-solid fa-graduation-cap"></i>Rezidentiat</a>
+            <a onclick="loadSection('Rp Certificat Moto.html', this)"><i class="fa-solid fa-motorcycle"></i>Rp. Certificat Moto</a>
+            <a onclick="loadSection('I.S.U.L.S..html', this)"><i class="fa-solid fa-fire-extinguisher"></i>Membrii I.S.U.L.S.</a>
+            <a onclick="loadSection('Certificat Pilot.html', this)"><i class="fa-solid fa-plane"></i>Certificat Pilot</a>
         </div>
     </div>
+    <div id="main-content" class="content"></div>
     <div class="intro-section">
     <div class="intro-header">
         <img src="https://i.imgur.com/1k8pQkA.png" alt="Logo stânga" class="intro-logo">
@@ -248,21 +246,15 @@
         </ul>
     </div>
 </div>
+<div id="main-content"></div>
     <script>
         function setActiveLink(el) {
             document.querySelectorAll('.sidebar-links a').forEach(a => a.classList.remove('active'));
-            el.classList.add('active');
+            if (el) el.classList.add('active');
         }
 
         function loadSection(filename) {
             setActiveLink(event.target);
-            if (filename === 'Introducere.html') {
-                document.getElementById('main-content').innerHTML = `
-                    <h1>Bine ai venit în Ghidul Departamentului Medical!</h1>
-                    <p>Selectează o secțiune din meniu.</p>
-                `;
-                return;
-            }
             fetch(filename)
                 .then(response => response.text())
                 .then(html => {
@@ -270,6 +262,15 @@
                 })
                 .catch(() => {
                     document.getElementById('main-content').innerHTML = '<p>Nu s-a putut încărca secțiunea.</p>';
+                });
+        }
+
+        // Încarcă introducerea la început
+        window.onload = function() {
+            fetch('IntroducereContent.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('main-content').innerHTML = html;
                 });
         }
     </script>
