@@ -3,336 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spitalul Județean Viceroy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-:root {
-    --primary: #682222;
-    --secondary: #b3302c;
-    --dark: #0f0f1a;
-    --light: #f0f0f0;
-    --neon-pink: #f1f0edea;
-    --neon-blue: #000000;
-}
+        body {
+            background: #e0e0e0;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .container-bg {
+            background: #d3d3d3;
+            border-radius: 32px;
+            margin: 16px auto;
+            max-width: 98vw;
+            min-height: 96vh;
+            box-shadow: 0 4px 32px #bbb;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 32px 0 32px;
+        }
+        .header-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #fff;
+            object-fit: contain;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px #bbb;
+        }
+        .header-center {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header-title {
+            background: #fff;
+            border-radius: 32px;
+            padding: 8px 32px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .header-title i {
+            color: #d32f2f;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 24px 0 0 0;
+        }
+        .nav-btn {
+            background: #ff6f6f;
+            border: none;
+            border-radius: 24px;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px #bbb;
+        }
+        .nav-btn.active, .nav-btn:hover {
+            background: #d32f2f;
+        }
+        .nav-btn:last-child {
+            margin-right: 0;
+        }
+        .nav-dot {
+            width: 36px;
+            height: 36px;
+            background: #444;
+            border-radius: 50%;
+            margin-left: 24px;
+            align-self: center;
+        }
+        .main-card {
+            background: #e5e5e5;
+            border-radius: 32px;
+            margin: 24px;
+            flex: 1;
+            box-shadow: 0 2px 16px #bbb;
+            padding: 32px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        @media (max-width: 900px) {
+            .header-bar { flex-direction: column; gap: 12px; padding: 12px 8px 0 8px;}
+            .header-title { font-size: 1.2rem; padding: 8px 12px;}
+            .main-card { padding: 12px; margin: 8px;}
+            .nav-bar { flex-wrap: wrap; gap: 8px;}
+        }
+        .logo-mijloc {
+            width: 300px;
+            height: 100px;
+            border-radius: 0%;
+            background: #fff;
+            object-fit: contain;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, var(--dark), #2e1a1c);
-    color: var(--light);
-    min-height: 100vh;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-}
-
-/* Efect cursor trail */
-.cursor-trail {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, var(--neon-pink), transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    opacity: 0.7;
-    mix-blend-mode: screen;
-}
-
-/* Header + Search */
-header {
-    text-align: center;
-    padding: 2rem;
-    position: relative;
-}
-
-.neon-text {
-    font-size: 3rem;
-    animation: neon-glow 3s ease-in-out infinite alternate;
-}
-
-@keyframes neon-glow {
-    from { text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-blue); }
-    to { text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-pink); }
-}
-
-.search-container {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-}
-
-#search-input {
-    padding: 0.5rem;
-    border: 2px solid transparent;
-    border-radius: 25px 0 0 25px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    width: 60%;
-    max-width: 400px;
-    transition: all 0.3s;
-}
-
-#search-input:focus {
-    outline: none;
-    border-color: var(--neon-blue);
-    background: rgba(0, 0, 0, 0.3);
-}
-
-#search-btn {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0 25px 25px 0;
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    color: white;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-#search-btn:hover {
-    transform: scale(1.05);
-}
-
-/* Navigatie */
-nav {
-    backdrop-filter: blur(10px);
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-        background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav a {
-    color: var(--light);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    transition: all 0.3s;
-}
-
-nav a:hover, nav a.active {
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    box-shadow: 0 0 15px var(--neon-pink);
-}
-
-/* Articole */
-main {
-    flex: 1; /* ocupă spațiul disponibil */
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-article {
-    display: none;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-radius: 15px;
-}
-
-article.active-section {
-    display: block;
-    animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.glass-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.highlight {
-    background: linear-gradient(90deg, transparent 50%, rgba(255, 0, 255, 0.3));
-    padding: 0 0.2rem;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.grid-item {
-    padding: 1.5rem;
-    text-align: center;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    transition: all 0.3s;
-}
-
-.hover-glow:hover {
-    background: rgba(194, 2, 2, 0.3);
-    box-shadow: 0 0 15px var(--neon-pink);
-    transform: translateY(-5px);
-}
-
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: auto; /* împinge footer-ul jos */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav ul { flex-direction: column; align-items: center; gap: 0.5rem; }
-    .neon-text { font-size: 2rem; }
-}
     </style>
-    <title>Ghid Ultra Avansat</title>
-
 </head>
 <body>
-    <div class="cursor-trail"></div>
-    <header>
-        <h1 class="neon-text">GHID MEDICAL PULOS</h1>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Caută...">
-            <button id="search-btn"><span>🔍</span></button>
-        </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#home" class="active">Acasă</a></li>
-            <li><a href="#articol1">Ghid</a></li>
-            <li><a href="#articol2">GID</a></li>
-            <li><a href="#despre">DA</a></li>
-            <li><a href="#jaf">taci</a></li>
-            <li><a href="#plm">da ma da</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <article id="home" class="active-section glass-card">
-            <h2>Bun venit!</h2>
-            <p>daca citesti asta esti gay. daca ai citit mesaj la tristan</p>
-            <div class="grid-container">
-                <div class="grid-item hover-glow">📚 mai da te drq</div>
-                <div class="grid-item hover-glow">🔬 laboratu unde te ai nascut</div>
-                <div class="grid-item hover-glow">🌍 lumea lu' mata</div>
+    <div class="container-bg">
+        <div class="header-bar">
+            <img src="Smuls_sigla.png" class="header-logo" alt="Logo stanga">
+            <div class="header-center">
+                <div class="header-title">
+                   <img src="viceroy.png" class="logo-mijloc"> <span style="font-family: monospace; color:#d32f2f;"></span>
+                </div>
             </div>
-        </article>
-
-        <article id="articol1" class="glass-card">
-            <h2>MA-TA</h2>
-            <li>Comportamentul cadrelor medicale trebuie să fie unul adecvat meseriei prestate.</li>
-            <li>Gradele medicale noi recrutate vor avea parte de sprijinul conducerii și al gradelor medicale superioare pentru a se asigura o etapizare a procesului de învățare în cariera medicală.</li>
-            <li><b style="color:#c62828;">INTERZISĂ</b> modificarea VIZUALĂ a autospecialelor. Acestora le pot fi MAXIM modificate PERFORMANȚELE și JANTELE!</li>
-            <li><b>NU</b> aveți voie să stați On-duty, între <b>orele 21:00-04:00</b> dacă nu sunt MINIM 3 cadre medicale care dețin certificările RADIO + BLS.</li>
-            <li>În <b>primele 2 săptămâni</b> după intrarea în departament, <b>NU</b> aveți dreptul la CONCEDIU! În cazuri excepționale trebuie aprobarea DIRECTORULUI GENERAL!</li>
-            <li><b>NU</b> se acceptă concedii mai mari de 14 zile. <b style="color:#c62828;">EXCEPȚIE</b> - Cu aprobarea Directorului general se poate accepta prelungirea acestuia.</li>
-            <li><b>NU</b> aveți voie să folosiți stația și dispecerul (/m; /s) <b>OFF DUTY</b>.</li>
-            <li>Pentru o faptă mai gravă se poate confisca CERTIFICATUL cu CD de 3 zile, după această perioadă trebuie susținut testul pentru a obține din nou certificatul - sancțiune acordată doar de <b>conducere</b>.</li>
-            <li>La JAFURI regula cu ascultarea de gradul superior este suspendată, deoarece COORDONATORUL DE JAF devine cel mai înalt grad, drept urmare toate celelalte grade (excepție conducerea) ascultă de ei. <i>Regula se aplică și gradelor ISULS! (Sancțiune I)</i></li>
-            <li>Echipajele medicale NU pot fi formate din 3 cadre medicale. Se acceptă un maxim de 2 persoane, în special pe unitățile aeriene. <b>Exceptie!</b> Jafuri/Conducere. <i>(Sancțiune III)</i></li>
-            <li>Gradele medicale NU au voie să sară cu parașuta de pe spital/clădiri. <i>(Sancțiune III)</i></li>
-            <li>Nu aveți voie să dansați/puneți muzică în FATA SPITALULUI. Caterinca este permisă, în limita bunului simț, în momentul în care nu sunt apeluri, ÎNSĂ, nu la vederea cetățenilor. <i>(Sancțiune III)</i></li>
-            <li>Gradele medicale se vor ajuta reciproc între ele și vor evita conflictele, atât cele interne (între medici) <i>(Sancțiune V)</i> cât și cele externe (între un medic și un civil/pacient). <i>(Sancțiune IV)</i></li>
-            <li>Un grad medical care NU deține certificatul SMULS, nu are voie să urce pe elicopter (pilot/medic intervenție). Iar gradele de Medic-Rezident (300) care au certificatul de pilot nu au voie să piloteze, pot fi doar medici de intervenție. <i>(Sancțiune VI)</i></li>
-            <li>Nu au voie să conducă altă autospecială a spitalului dacă nu posedă gradul aferent pentru aceasta (Vezi ghid). <i>(Sancțiune VI)</i></li>
-            <li>ON-DUTY, veți avea dreptul la 5 minute de pauză MAXIM/ ORĂ. În cazul în care, nu vă încadrați, sunteți OBLIGAȚI să vă închideți pontajul. În caz contrar, veți fi sancționați. <i>Nota: Aveți obligația să vă treceți pe camera de #spital-afk. (Sancțiune VIII)</i></li>
-            <li>NU uitați când intrați pe tură să vă porniți pontajul și să vă luați echipamentele spitalului. NU ștergeți pontajele anulate. <i>(Sancțiune VIII)</i></li>
-            <li>Pontajul minim este de 30 de minute, ele se vor închide la ora 00:00 după care se redeschide cu aceeași oră (dacă stați peste noapte). Obligatoriu trecerea minutelor în paranteză. <i>(Sancțiune VIII)</i></li>
-            <li>Pontajele se deschid/închid cu maxim +/- 10 minute. Dacă editați pontajul după 10 minute trebuie să luați legătura cu un membru HR să primiți bifa la pontaj. <i>(Sancțiune VIII)</i></li>
-            <li>Nu se permite vorbitul peste gradele superioare pe stație. <i>Nota: Dacă gradul cel mai mare nu răspunde în termen de 10 secunde sau până la cea de a doua solicitare, atunci răspunde următorul grad ierarhic! S.A.M.D. (Sancțiune X)</i></li>
-            <li>Nu aveți voie să schimbați uniformele spitalului (se face excepție doar la OCHELARI dacă sunt DECENȚI și primiți aprobare de la CONDUCEREA SPITALULUI) și de asemenea nu este permis să aveți tatuaje pe față (în rest puteți să aveți pe orice parte a corpului). <i>(Sancțiunea XV)</i></li>
-            <li>Pentru a putea părăsi departamentul medical sunt necesare următoarele condiții: cadrul medical să aibă minim 14 zile, pontajul de 1680 minute (120 min/zi) și să nu aibă amenzi neplătite, în caz contrar va primi BAN.</li>
-        </ul>
-        </article>
-        
-        <article id="articol2" class="glass-card">
-            <h2>ad</h2>
-            <p>DADA</p>
-        </article>
-
-        <article id="despre" class="glass-card">
-            <h2>a da?</h2>
-            <p>da ma</p>
-        </article>
-
-        <article id="jaf" class="glass-card">
-            <h2>aaaaa?</h2>
-            <p>dadada</p>
-        </article>
-
-        <article id="plm" class="glass-card">
-            <h2>bbbb</h2>
-            <p>da ma</p>
-        </article>
-    </main>
-
-    <footer class="glass-card">
-        <p>© 2025 Departamentul Medical</p>
-    </footer>
-
+            <img src="sigla_isuls.png" class="header-logo" alt="Logo dreapta">
+        </div>
+        <div class="nav-bar">
+            <button class="nav-btn active" onclick="showSection('acasa')">Acasă</button>
+            <button class="nav-btn" onclick="showSection('ghid')">Ghid</button>
+            <button class="nav-btn" onclick="showSection('gid')">GID</button>
+            <button class="nav-btn" onclick="showSection('despre')">Despre</button>
+            <button class="nav-btn" onclick="showSection('contact')">Contact</button>
+            <div class="nav-dot"></div>
+        </div>
+        <div class="main-card" id="main-content">
+            <div id="acasa" class="section" style="display:block">
+                <h2>Bun venit!</h2>
+                <p>Aici găsești toate informațiile pentru personalul medical.</p>
+            </div>
+            <div id="ghid" class="section" style="display:none">
+                <h2>Ghid</h2>
+                <ul>
+                    <li>Comportamentul cadrelor medicale trebuie să fie unul adecvat meseriei prestate.</li>
+                    <li>Gradele medicale noi recrutate vor avea parte de sprijinul conducerii și al gradelor medicale superioare pentru a se asigura o etapizare a procesului de învățare în cariera medicală.</li>
+                    <li><b style="color:#c62828;">INTERZISĂ</b> modificarea VIZUALĂ a autospecialelor. Acestora le pot fi MAXIM modificate PERFORMANȚELE și JANTELE!</li>
+                    <li><b>NU</b> aveți voie să stați On-duty, între <b>orele 21:00-04:00</b> dacă nu sunt MINIM 3 cadre medicale care dețin certificările RADIO + BLS.</li>
+                    <li>În <b>primele 2 săptămâni</b> după intrarea în departament, <b>NU</b> aveți dreptul la CONCEDIU! În cazuri excepționale trebuie aprobarea DIRECTORULUI GENERAL!</li>
+                    <li><b>NU</b> se acceptă concedii mai mari de 14 zile. <b style="color:#c62828;">EXCEPȚIE</b> - Cu aprobarea Directorului general se poate accepta prelungirea acestuia.</li>
+                    <li><b>NU</b> aveți voie să folosiți stația și dispecerul (/m; /s) <b>OFF DUTY</b>.</li>
+                    <li>Pentru o faptă mai gravă se poate confisca CERTIFICATUL cu CD de 3 zile, după această perioadă trebuie susținut testul pentru a obține din nou certificatul - sancțiune acordată doar de <b>conducere</b>.</li>
+                    <li>La JAFURI regula cu ascultarea de gradul superior este suspendată, deoarece COORDONATORUL DE JAF devine cel mai înalt grad, drept urmare toate celelalte grade (excepție conducerea) ascultă de ei.</li>
+                </ul>
+            </div>
+            <div id="gid" class="section" style="display:none">
+                <h2>GID</h2>
+                <p>Informații despre identificarea și certificările medicale.</p>
+            </div>
+            <div id="despre" class="section" style="display:none">
+                <h2>Despre</h2>
+                <p>Acest ghid este realizat pentru a ajuta personalul medical să respecte regulile și să aibă acces rapid la informații utile.</p>
+            </div>
+            <div id="contact" class="section" style="display:none">
+                <h2>Contact</h2>
+                <p>Pentru întrebări sau sugestii, contactați conducerea departamentului.</p>
+            </div>
+        </div>
+    </div>
     <script>
-        // Navigare între articole
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        
-        // Ascunde toate articolele
-        document.querySelectorAll('article').forEach(article => {
-            article.classList.remove('active-section');
-        });
-        
-        // Arată articolul selectat
-        document.getElementById(targetId).classList.add('active-section');
-        
-        // Updatează link-ul activ
-        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-        link.classList.add('active');
-    });
-});
-
-// Căutare simplă
-document.getElementById('search-btn').addEventListener('click', () => {
-    const searchTerm = document.getElementById('search-input').value.toLowerCase();
-    const articles = document.querySelectorAll('article');
-    let found = false;
-
-    articles.forEach(article => {
-        const text = article.textContent.toLowerCase();
-        if (text.includes(searchTerm)) {
-            article.classList.add('active-section');
-            found = true;
-        } else {
-            article.classList.remove('active-section');
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('.nav-btn[onclick*="'+id+'"]').classList.add('active');
         }
-    });
-
-    if (!found) alert('Nu s-a găsit nimic!');
-});
-
-
     </script>
 </body>
 </html>
