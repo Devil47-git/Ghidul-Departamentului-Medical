@@ -127,7 +127,6 @@ body {
     flex: 0 0 auto;
     cursor: pointer;
     transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px #bbb;
 }
 .nav-btn.active, .nav-btn:hover {
     background: #d32f2f;
@@ -156,7 +155,6 @@ body {
     border-radius: 24px;
     padding: 16px 32px;
     margin: 0;
-    box-shadow: 0 2px 8px #bbb;
     cursor: pointer;
     transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
     min-width: 160px;
@@ -203,6 +201,7 @@ body.dark-mode input,
 body.dark-mode select,
 body.dark-mode textarea {
     background: #232323 !important;
+    border-radius: 60px;
     color: #f0f0f0 !important;
     box-shadow: 0 2px 16px #00000088 !important;
 }
@@ -216,7 +215,6 @@ body.dark-mode .jaf-btn,
 body.dark-mode th,
 body.dark-mode td {
     background: #333 !important;
-    color: #f0f0f0 !important;
 }
 body.dark-mode .nav-btn.active,
 body.dark-mode .nav-btn:hover,
@@ -280,6 +278,7 @@ body.dark-mode [style*='background:#fff7f7'],
 body.dark-mode [style*='background:#f9f9ff'] {
     background: #232323 !important;
     color: #f0f0f0 !important;
+    border-radius: 32px !important; /* sau 48px dacă vrei mai rotund */
 }
 body.dark-mode [style*="background:rgba(255,255,255"],
 body.dark-mode [style*="background:rgba(255,255,255,0.97"] {
@@ -516,6 +515,14 @@ body.dark-mode [style*="background: #fff3f3"] {
     border: none !important;
     box-shadow: none !important;
 }
+body.dark-mode .jaf-content > div,
+body.dark-mode .jaf-content > div[style*="background:#fff"],
+body.dark-mode .jaf-content > div[style*="background: #fff"] {
+    background: #232323 !important;
+    color: #f0f0f0 !important;
+    border-radius: 32px !important;
+    box-shadow: 0 4px 16px #d32f2f55 !important;
+}
     </style>
 </head>
 <body>
@@ -599,7 +606,6 @@ body.dark-mode [style*="background: #fff3f3"] {
                     font-weight:900;
                     letter-spacing:2.5px;
                     margin:0;
-                    text-shadow:0 2px 16px #fff, 0 2px 8px #d32f2f33;
                     ">
                     <i class="fa-solid fa-heart-pulse"></i> INTRODUCERE
                 </h2>
@@ -739,7 +745,7 @@ body.dark-mode [style*="background: #fff3f3"] {
     <div style="
         background: #e0e0e0;
         border-radius: 48px;
-        box-shadow: 0 8px 40px #bbb;
+        box-shadow: 0 8px 40px #d32f2f22;
         padding: 2.5em 1.5em 2em 1.5em;
         max-width: 1100px;
         margin: 0 auto 2.5em auto;
@@ -755,7 +761,6 @@ body.dark-mode [style*="background: #fff3f3"] {
                     font-weight:900;
                     letter-spacing:2px;
                     margin:0;
-                    text-shadow:0 2px 8px #fff, 0 2px 8px #d32f2f22;
                     ">
                     <i class="fa-solid fa-mask"></i> Ghid Jaf
                 </h2>
@@ -1371,24 +1376,21 @@ body.dark-mode [style*="background: #fff3f3"] {
             <i class="fa-solid fa-circle-info"></i> INFO UTILE
         </h2>
 
-        <!-- Derogare III -->
-        <h3 style="color:#d32f2f; font-size:1.25rem; font-weight:800; margin-bottom:1em;">
-            <center><i class="fa-solid fa-triangle-exclamation"></i> Derogare III
-        </h3></center>
-        <div style="overflow-x:auto; margin-bottom:2em;">
-<table style="width:100%; border-collapse:collapse;">
+<!-- doar thead și primul/ultimul td din tbody -->
+<div style="overflow-x:auto; margin-bottom:2em;">
+<table style="width:100%; border-collapse:collapse; border-radius:32px; overflow:hidden; box-shadow:0 4px 16px #d32f2f22;">
     <thead>
         <tr style="background:#888; color:#fff;">
-            <th>Acordată de</th>
+            <th style="border-radius:32px 0 0 0;">Acordată de</th>
             <th>Status</th>
             <th>Derogarea</th>
             <th>Intrarea în vigoare</th>
-            <th>Expiră</th>
+            <th style="border-radius:0 32px 0 0;">Expiră</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align:center;">M-001</td>
+            <td style="text-align:center; border-radius:0 0 0 32px;">M-001</td>
             <td style="text-align:center;">
                 <span style="display:inline-block; background:#b71c1c; color:#fff; border-radius:12px; padding:4px 18px; font-weight:700; font-family:inherit;">
                     Inactivă
@@ -1396,11 +1398,11 @@ body.dark-mode [style*="background: #fff3f3"] {
             </td>
             <td style="text-align:center;">-</td>
             <td style="text-align:center;">-</td>
-            <td style="text-align:center;">-</td>
+            <td style="text-align:center; border-radius:0 0 32px 0;">-</td>
         </tr>
     </tbody>
 </table>
-        </div>
+</div>
 
         <!-- Mesaj Concediu de Civil - stil Info Utile -->
 <div style="background:#fffbe7; border-radius:18px; box-shadow:0 2px 8px #d32f2f22; padding:1.5em; margin-bottom:2em;">
@@ -1505,12 +1507,12 @@ body.dark-mode [style*="background: #fff3f3"] {
                 <td style="text-align:center;">24.02.2025</td>
             </tr>
             <tr>
-                <td style="text-align:center;">Nica Madalina</td>
+                <td style="text-align:center;">Nica Madalin</td>
                 <td style="text-align:center;">90824</td>
                 <td style="text-align:center;">M-105</td>
                 <td style="color:#d32f2f; font-weight:700; text-align:center;">Medic Primar</td>
                 <td style="color:#43d943; font-weight:700; text-align:center;">Activ</td>
-                <td style="color:#1976d2; font-weight:700; text-align:center;">PR</td>
+                <td style="color:#6c08be; font-weight:700; text-align:center;">PR</td>
                 <td style="text-align:center;">24.02.2025</td>
             </tr>
             <tr>
@@ -1819,7 +1821,7 @@ body.dark-mode [style*="background: #fff3f3"] {
 <h3 style="color:#d32f2f; font-size:1.25rem; font-weight:800; margin:2em 0 1em 0; text-align:center;">
     <i class="fa-solid fa-money-bill-wave"></i> Plăți & Cooldown Teste
 </h3>
-<div class="scroll-x" style="margin-bottom:2em;">
+<div class="scroll-x" style="margin-bottom:2.5em;">
     <table style="min-width:700px; width:100%; border-collapse:separate; border-spacing:0; background:#fff; border-radius:24px; box-shadow:0 2px 16px #bbb;">
         <thead>
             <tr style="background:#888; color:#fff;">
@@ -1870,19 +1872,21 @@ body.dark-mode [style*="background: #fff3f3"] {
     </table>
 </div>
 
-<div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; padding:2em; margin-bottom:2em;">
+<!-- Container cu border-radius și shadow -->
+<div style="background:#fff; border-radius:24px; padding:1.2em 1.2em 1em 1.2em; margin-bottom:2em;">
     <h3 style="color:#d32f2f; font-size:1.4rem; font-weight:900; margin-bottom:1.2em; text-align:center;">
         <i class="fa-solid fa-calendar-check"></i> Calculare Pontaje MEDICI [H.R]
     </h3>
     <div style="overflow-x:auto;">
-        <table style="min-width:700px; width:100%; border-collapse:separate; border-spacing:0; background:#fff; border-radius:24px; box-shadow:0 2px 16px #bbb;">
-            <thead style="background:#bdbdbd; color:#000; border-radius: 24px;">
+        <!-- Tabel FĂRĂ background, border-radius, box-shadow -->
+        <table style="min-width:700px; width:100%; border-collapse:separate; border-spacing:0;">
+            <thead style="background:#888; color:#000;">
                 <tr>
-                    <th style="padding:12px;">Ziua Pontajului</th>
+                    <th style="padding:12px; border-radius: 24px 0 0 24px;">Ziua Pontajului</th>
                     <th style="padding:12px;">MEDIC</th>
                     <th style="padding:12px;">Grad</th>
                     <th style="padding:12px;">Call-Sign</th>
-                    <th style="padding:12px;">ID</th>
+                    <th style="padding:12px; border-radius: 0 24px 24px 0;">ID</th>
                 </tr>
             </thead>
             <tbody style="text-align:center;">
@@ -2035,7 +2039,7 @@ body.dark-mode [style*="background: #fff3f3"] {
         <tbody>
             <tr>
                 <td style="text-align:center;">
-                    <button style="background:#2196f3; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; cursor:pointer;" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSe_ZLr1thsM1jFUuWoQom175PrzKU0ilpO7fFIpNvZn74Xnfg/viewform','_blank')">
+                    <button style="background:#2196f3; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; cursor:pointer;">
                         Cerere Concediu
                     </button>
                 </td>
@@ -2047,7 +2051,7 @@ body.dark-mode [style*="background: #fff3f3"] {
             </tr>
             <tr>
                 <td style="text-align:center;">
-                    <button style="background:#ff9800; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; cursor:pointer;" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScoOhfNURcqvnV97HvbwPRV4vfmCSRPXiAT-vAW63PghKXmVQ/viewform','_blank')">
+                    <button style="background:#ff9800; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; cursor:pointer;">
                         Invoire Ședință
                     </button>
                 </td>
@@ -2059,7 +2063,7 @@ body.dark-mode [style*="background: #fff3f3"] {
             </tr>
             <tr>
                 <td style="text-align:center;">
-                    <button style="background:#d32f2f; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; cursor:pointer;" onclick="window.open('https://calonline.net/calculator-de-ore','_blank')">
+                    <button style="background:#d32f2f; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; cursor:pointer;">
                         Calculator Pontaj
                     </button>
                 </td>
@@ -2108,7 +2112,6 @@ body.dark-mode [style*="background: #fff3f3"] {
                     font-weight:900;
                     letter-spacing:2.5px;
                     margin:0;
-                    text-shadow:0 2px 16px #fff, 0 2px 8px #d32f2f33;
                 ">
                     <i class="fa-solid fa-hospital-user"></i> RP SPITAL
                 </h2>
@@ -2323,7 +2326,7 @@ body.dark-mode [style*="background: #fff3f3"] {
 </div>
             <div id="coduri-radio" class="section">
     <div style="background: linear-gradient(120deg, #fff3f3 60%, #e3f2fd 100%); border-radius: 48px; box-shadow: 0 8px 40px #d32f2f22; padding: 2.5em 1.5em 2em 1.5em; max-width: 1100px; margin: 0 auto 2.5em auto;">
-        <h2 style="color:#d32f2f; font-size:2.7rem; font-weight:900; text-align:center; margin-bottom:1.5em; letter-spacing:2px; text-shadow:0 2px 16px #fff, 0 2px 8px #d32f2f33;">
+        <h2 style="color:#d32f2f; font-size:2.7rem; font-weight:900; text-align:center; margin-bottom:1.5em; letter-spacing:2px; text-shadow:0 0px 0px">
             <i class="fa-solid fa-walkie-talkie"></i> CODURI RADIO
         </h2>
 
@@ -2333,7 +2336,7 @@ body.dark-mode [style*="background: #fff3f3"] {
                 <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
                     <i class="fa-solid fa-headset"></i> Coduri de Comunicare
                 </h3>
-                <table style="width:100%; border-collapse:separate; border-spacing:0 6px;">
+                <table style="width:100%; border-collapse:separate; border-spacing:0 6px; white-space:nowrap;">
                     <thead>
                         <tr style="background:#d32f2f; color:#fff;">
                             <th style="padding:10px 8px; border-radius:18px 0 0 18px;">Semnificație</th>
@@ -2473,7 +2476,7 @@ body.dark-mode [style*="background: #fff3f3"] {
                             <td>
                                 <span style="font-weight:600;">Intrare în tură (doar pe Dispecer).</span><br>
                                 <span style="color:#b71c1c;">Exemplu:</span>
-                                <span style="background:#e3f2fd; border-radius:8px; padding:2px 10px; font-weight:700;">M-009, 10-41</span>
+                                <span style="background:#e3f2fd; border-radius:8px; padding:2px 10px; font-weight:700;">M-009, 10-41 (doar pe dispecer)</span>
                             </td>
                         </tr>
                         <tr style="background:#fff7f7;">
@@ -2481,7 +2484,7 @@ body.dark-mode [style*="background: #fff3f3"] {
                             <td>
                                 <span style="font-weight:600;">Ieșire din tură (doar pe Dispecer).</span><br>
                                 <span style="color:#b71c1c;">Exemplu:</span>
-                                <span style="background:#ffeaea; border-radius:8px; padding:2px 10px; font-weight:700;">M-009, 10-42</span>
+                                <span style="background:#ffeaea; border-radius:8px; padding:2px 10px; font-weight:700;">M-009, 10-42 (doar pe dispecer)</span>
                             </td>
                         </tr>
                         <tr style="background:#f9f9ff;">
@@ -2529,7 +2532,7 @@ body.dark-mode [style*="background: #fff3f3"] {
                             <td>
                                 <span style="font-weight:600;">Ieși de pe stație pentru control Medicina Muncii.</span><br>
                                 <span style="color:#b71c1c;">Exemplu:</span>
-                                <span style="background:#ffeaea; border-radius:8px; padding:2px 10px; font-weight:700;">M-009, 10-100 Medicina Muncii motivul</span>
+                                <span style="background:#ffeaea; border-radius:8px; padding:2px 10px; font-weight:700;">M-009, 10-100 Medicina Muncii motivul (doar pe dispecer)</span>
                             </td>
                         </tr>
                     </tbody>
@@ -2828,7 +2831,7 @@ body.dark-mode [style*="background: #fff3f3"] {
         <div style="display: flex; justify-content: center; align-items: center; gap: 3vw; width: 100%; margin-bottom: 2em;">
             <img src="medicihrteam.png" alt="Logo stânga" style="height:90px; border-radius: 32px; background: #fff; box-shadow: 0 4px 24px #bbb;">
             <div style="flex:1; text-align:center;">
-                <h2 style="color:#b71c1c; font-size:2.7rem; font-weight:900; letter-spacing:2.5px; margin:0; text-shadow:0 2px 16px #fff, 0 2px 8px #d32f2f33;">
+                <h2 style="color:#b71c1c; font-size:2.7rem; font-weight:900; letter-spacing:2.5px; margin:0;">
                     <i class="fa-solid fa-truck-medical"></i> RP S.M.U.L.S. / Cert. S.M.U.L.S.
                 </h2>
                 <div style="margin-top:0.8em; font-size:1.25rem; color:#444; font-weight:600; display:inline-block; background:linear-gradient(90deg,#fff,#ffeaea 80%); border-radius:22px; padding:0.4em 2em; box-shadow:0 2px 12px #d32f2f22;">
