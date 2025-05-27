@@ -532,6 +532,25 @@ body.dark-mode td {
     box-shadow: none !important;
     border: none !important;
 }
+a[style*="background:"], span[style*="background:"] {
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+a[style*="background:"]:hover, span[style*="background:"]:hover {
+    box-shadow: 0 4px 16px #0002;
+    transform: scale(1.04);
+    filter: brightness(1.08);
+}
+a[style*="color:#d32f2f"]:hover,
+a[style*="color:#2196f3"]:hover,
+a[style*="color:#ff9800"]:hover {
+    text-decoration: underline;
+    filter: brightness(1.2);
+}
+#rp-smuls {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 
     </style>
 </head>
@@ -3827,6 +3846,11 @@ function toggleDarkMode() {
         document.getElementById('darkModeToggle').innerHTML = isDark ? '☀️' : '🌙';
     }
 }
+</script>
+<script>
+document.getElementById('rp-smuls').addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
 </script>
 </body>
 </html>
