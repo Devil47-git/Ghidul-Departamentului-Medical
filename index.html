@@ -523,6 +523,16 @@ body.dark-mode .jaf-content > div[style*="background: #fff"] {
     border-radius: 32px !important;
     box-shadow: 0 4px 16px #d32f2f55 !important;
 }
+body.dark-mode table {
+    background: transparent !important;
+}
+body.dark-mode th,
+body.dark-mode td {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
     </style>
 </head>
 <body>
@@ -2037,42 +2047,41 @@ body.dark-mode .jaf-content > div[style*="background: #fff"] {
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td style="text-align:center;">
-                    <button style="background:#2196f3; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; cursor:pointer;">
-                        Cerere Concediu
-                    </button>
-                </td>
-                <td style="text-align:center;">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_ZLr1thsM1jFUuWoQom175PrzKU0ilpO7fFIpNvZn74Xnfg/viewform" target="_blank" style="color:#2196f3; font-weight:700; text-decoration:underline;">
-                        Cerere Concediu
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align:center;">
-                    <button style="background:#ff9800; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; cursor:pointer;">
-                        Invoire Ședință
-                    </button>
-                </td>
-                <td style="text-align:center;">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScoOhfNURcqvnV97HvbwPRV4vfmCSRPXiAT-vAW63PghKXmVQ/viewform" target="_blank" style="color:#ff9800; font-weight:700; text-decoration:underline;">
-                        Invoire Ședință
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align:center;">
-                    <button style="background:#d32f2f; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; cursor:pointer;">
-                        Calculator Pontaj
-                    </button>
-                </td>
-                <td style="text-align:center;">
-                    <a href="https://calonline.net/calculator-de-ore" target="_blank" style="color:#d32f2f; font-weight:700; text-decoration:underline;">
-                        Calculator Pontaj
-                    </a>
-                </td>
-            </tr>
+<tr>
+    <td style="text-align:center;">
+        <span style="background:#2196f3; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; display:inline-block;">
+            Cerere Concediu
+        </span>
+    </td>
+    <td style="text-align:center;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_ZLr1thsM1jFUuWoQom175PrzKU0ilpO7fFIpNvZn74Xnfg/viewform" target="_blank" style="color:#2196f3; font-weight:700; text-decoration:underline;">
+            Cerere Concediu
+        </a>
+    </td>
+</tr>
+<tr>
+    <td style="text-align:center;">
+        <span style="background:#ff9800; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; display:inline-block;">
+            Invoire Ședință
+        </span>
+    </td>
+    <td style="text-align:center;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_ZLr1thsM1jFUuWoQom175PrzKU0ilpO7fFIpNvZn74Xnfg/viewform" target="_blank" style="color:#ff9800; font-weight:700; text-decoration:underline;">
+            Invoire Ședință
+        </a>
+    </td>
+</tr>
+    <td style="text-align:center;">
+        <span style="background:#d32f2f; color:#fff; border:none; border-radius:18px; padding:7px 22px; font-weight:700; font-size:1rem; display:inline-block;">
+            Calculator Pontaj
+        </span>
+    </td>
+    <td style="text-align:center;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_ZLr1thsM1jFUuWoQom175PrzKU0ilpO7fFIpNvZn74Xnfg/viewform" target="_blank" style="color:#d32f2f; font-weight:700; text-decoration:underline;">
+            Calculator Pontaj
+        </a>
+    </td>
+</tr>
         </tbody>
     </table>
 </div>
@@ -2863,11 +2872,11 @@ body.dark-mode .jaf-content > div[style*="background: #fff"] {
                 <h3 style="color:#b71c1c; font-size:1.18rem; font-weight:900; margin-bottom:1em; text-align:center;">
                     <i class="fa-solid fa-briefcase-medical"></i> Echipamente de prim-ajutor
                 </h3>
-                <table style="width:100%; border-collapse:collapse; margin-bottom:1em;">
+                <table style="width:100%; border-collapse:collapse; margin-bottom:1em; box-shadow: none !important">
                     <thead>
                         <tr style="background:#ffeaea; color:#b71c1c;">
-                            <th style="padding:8px;">DENUMIRE ECHIPAMENT</th>
-                            <th style="padding:8px;">UTILIZARE</th>
+                            <th style="padding:8px; box-shadow: none !important; border-radius: 24px 0 0 24px;">DENUMIRE ECHIPAMENT</th>
+                            <th style="padding:8px; box-shadow: none !important; border-radius: 0 24px 24px 0;">UTILIZARE</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -2891,11 +2900,11 @@ body.dark-mode .jaf-content > div[style*="background: #fff"] {
                 <h3 style="color:#b71c1c; font-size:1.18rem; font-weight:900; margin-bottom:1em; text-align:center;">
                     <i class="fa-solid fa-screwdriver-wrench"></i> Echipamente S.M.U.L.S. de Descarcerare
                 </h3>
-                <table style="width:100%; border-collapse:collapse; margin-bottom:1em;">
+                <table style="width:100%; border-collapse:collapse; margin-bottom:1em; box-shadow: none !important">
                     <thead>
                         <tr style="background:#ffeaea; color:#b71c1c;">
-                            <th style="padding:8px;">Echipament</th>
-                            <th style="padding:8px;">Utilizare</th>
+                            <th style="padding:8px; border-radius: 24px 0 0 24px;">Echipament</th>
+                            <th style="padding:8px; border-radius: 0 24px 24px 0;">Utilizare</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -3338,7 +3347,7 @@ body.dark-mode .jaf-content > div[style*="background: #fff"] {
 
             <div id="rp-operatii" class="section">
     <div style="background: #fff; border-radius: 48px; box-shadow: 0 8px 40px #d32f2f22; padding: 2.5em 1.5em 2em 1.5em; max-width: 1100px; margin: 0 auto 2.5em auto; display: flex; flex-direction: column; align-items: center;">
-        <h2 style="color:#b71c1c; font-size:2.7rem; font-weight:900; letter-spacing:2.5px; margin-bottom:1em; text-shadow:0 2px 16px #fff, 0 2px 8px #d32f2f33;">
+        <h2 style="color:#b71c1c; font-size:2.7rem; font-weight:900; letter-spacing:2.5px; margin-bottom:1em;">
             <i class="fa-solid fa-user-doctor"></i> RP OPERAȚII
         </h2>
         <div style="background:rgba(255,255,255,0.97); border-radius: 36px; padding: 2.2em 2.5em 2em 2.5em; box-shadow: 0 4px 32px #d32f2f18; margin-bottom:2.2em; width:100%; max-width:900px; text-align:left; font-family:'Segoe UI', Arial, sans-serif;">
