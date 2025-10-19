@@ -3936,125 +3936,453 @@ Pentru o intervenție eficientă, vor fi utilizate minim două unități aeriene
     </div>
 
     <div id="uniforme" class="section">
-    <div style="background: linear-gradient(120deg, #fff3f3 60%, #e3f2fd 100%); border-radius: 48px; box-shadow: 0 8px 40px #d32f2f22; padding: 2.5em 1.5em 2em 1.5em; max-width: 1100px; margin: 0 auto 2.5em auto;">
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5em;">
-            <img src="logo-fivem.png" alt="Logo stânga" style="height:60px; border-radius:16px; background:#fff; box-shadow:0 2px 8px #bbb;">
-            <h2 style="color:#b71c1c; font-size:2.5rem; font-weight:900; letter-spacing:2px; margin:0; text-align:center;">
-                <center><i class="fa-solid fa-shirt"></i> UNIFORME
-            </h2></center>
-            <img src="hrteamlogo.png" alt="Logo dreapta" style="height:60px; border-radius:16px; background:#fff; box-shadow:0 2px 8px #bbb;">
+        <div style="
+        background: #e0e0e0;
+        border-radius: 48px;
+        box-shadow: 0 8px 40px #d32f2f22;
+        padding: 2.5em 1.5em 2em 1.5em;
+        max-width: 1100px;
+        margin: 0 auto 2.5em auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    ">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 3vw; width: 100%; margin-bottom: 2em;">
+            <div style="flex:1; text-align:center;">
+                <h2 style="
+                    color:#d32f2f;
+                    font-size:2.3rem;
+                    font-weight:900;
+                    letter-spacing:2px;
+                    margin:0;
+                    ">
+                    <i class="fa-solid fa-shirt"></i> Uniforme
+                </h2>
+            </div>
+
+        </div>
+
+        <div style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px 24px;
+            margin-bottom: 2.5em;
+            width: 100%;
+        ">
+            <button class="jaf-btn active" data-jaf="uniforme-spital">Spital</button>
+            <button class="jaf-btn" data-jaf="uniforme-ambulantier">Ambulantier</button>
+            <button class="jaf-btn" data-jaf="uniforme-smuls">S.M.U.L.S.</button>
+            <button class="jaf-btn" data-jaf="uniforme-isuls">I.S.U.L.S.</button>
+            <button class="jaf-btn" data-jaf="uniforme-pcls">P.C.L.S.</button>
+            <button class="jaf-btn" data-jaf="uniforme-conducere">Conducere</button>
         </div>
 
         <!-- Uniforma Asistent de garda -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> Asistent de garda
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
+        <div class="jaf-content uniforme-spital" style="display:none;">
+  <div style="
+      display:flex; 
+      justify-content:center; 
+      gap:2em; 
+      flex-wrap:wrap; 
+      max-width:720px; 
+      margin:0 auto;
+  ">
 
-        <!-- Uniforma Ambulantier -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> Ambulantier
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
-
-        <!-- Uniforma Smuls -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> S.M.U.L.S.
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
-
-        <!-- Uniforma Supervizor smuls -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> Supervizor S.M.U.L.S.
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
-
-        <!-- Uniforma Moto -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> Moto
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
-
-        <!-- Uniforma Pilot -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> Pilot
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
-
-        <!-- Uniforma Isuls -->
-       <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> I.S.U.L.S.
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
-
-        <!-- Uniforma Supervizor Isuls -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> Supervizor I.S.U.L.S.
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
-
-        <!-- Uniforma ISULS-PCLS -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> I.S.U.L.S. - P.C.L.S.
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
-
-        <!-- Uniforma MMLS-PCLS -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> M.M.L.S. - P.C.L.S.
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
-
-        <!-- Uniforma DSLS-PCLS -->
-        <div style="background:#fff; border-radius:24px; box-shadow:0 2px 16px #d32f2f22; margin-bottom:2em; padding:2em;">
-            <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em;">
-                <center><i class="fa-solid fa-shirt"></i> D.S.L.S. - P.C.L.S.
-            </h3></center>
-            <div style="text-align:center;">
-                <img src="zone-reg2.png" style="width:640px; max-width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
-            </div>
-        </div>
+    <!-- Card 1 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Asistent de garda
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_asistent_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
     </div>
+
+    <!-- Card 2 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Asistent de garda
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_asistent_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Doctor de garda 
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_rezident+_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Doctor de garda 
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_rezident+_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Uniforma Ambulantier -->
+    <div class="jaf-content uniforme-ambulantier" style="display:none;">
+  <div style="display:flex; justify-content:center; gap:2em; flex-wrap:wrap; max-width:720px; margin:0 auto;">
+
+    <!-- Card 1 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Ambulantier - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_ambulantier_vara_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Ambulantier - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_ambulantier_iarna_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Ambulantier - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_ambulantier_vara_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Ambulantier - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_ambulantier_iarna_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Uniforma SMULS -->
+    <div class="jaf-content uniforme-smuls" style="display:none;">
+  <div style="display:flex; justify-content:center; gap:2em; flex-wrap:wrap; max-width:720px; margin:0 auto;">
+
+    <!-- Card 1 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> S.M.U.L.S. - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_smuls_vara_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> S.M.U.L.S. - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_smuls_iarna_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> S.M.U.L.S. - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_smuls_vara_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> S.M.U.L.S. - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_smuls_iarna_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> C.J. S.M.U.L.S. - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_cj_smuls_vara_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> C.J. S.M.U.L.S. - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_cj_smuls_iarna_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> C.J. S.M.U.L.S. - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_cj_smuls_vara_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> C.J. S.M.U.L.S. - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_cj_smuls_iarna_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Moto
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_moto_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Moto
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_moto_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 11 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Pilot
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_pilot_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Uniforma ISULS -->
+    <div class="jaf-content uniforme-isuls" style="display:none;">
+  <div style="display:flex; justify-content:center; gap:2em; flex-wrap:wrap; max-width:720px; margin:0 auto;">
+
+    <!-- Card 1 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> I.S.U.L.S. - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_isuls_vara_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> I.S.U.L.S. - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_isuls_iarna_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> I.S.U.L.S. - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_isuls_vara_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> I.S.U.L.S. - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_isuls_iarna_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> C.J. I.S.U.L.S. - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_cj_isuls_vara_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> C.J. I.S.U.L.S. - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_cj_isuls_iarna_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Uniforma PCLS -->
+    <div class="jaf-content uniforme-pcls" style="display:none;">
+  <div style="display:flex; justify-content:center; gap:2em; flex-wrap:wrap; max-width:720px; margin:0 auto;">
+
+    <!-- Card 1 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> I.S.U.L.S.
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_isuls_pcls_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> I.S.U.L.S.
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_isuls_pcls_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> D.S.L.S.
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_dsls_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> D.S.L.S.
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_dsls_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> M.M.L.S.
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_mmls_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> M.M.L.S.
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_mmls_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Uniforma Conducere -->
+    <div class="jaf-content uniforme-conducere" style="display:none;">
+  <div style="display:flex; justify-content:center; gap:2em; flex-wrap:wrap; max-width:720px; margin:0 auto;">
+
+    <!-- Card 1 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Conducere - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_conducere_vara_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Conducere - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_conducere_iarna_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Conducere - Vara
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_conducere_vara_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Conducere - Iarna
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_conducere_iarna_f.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div style="background:#fff; border-radius:24px; padding:2em; width:320px;">
+      <h3 style="color:#b71c1c; font-size:1.35rem; font-weight:900; margin-bottom:1em; text-align:center;">
+        <i class="fa-solid"></i> Conducere I.S.U.L.S.
+      </h3>
+      <div style="text-align:center;">
+        <img src="img_conducere_isu_b.png" style="width:100%; border-radius:16px; box-shadow:0 2px 8px #bbb;">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </div>
 </div>
 
